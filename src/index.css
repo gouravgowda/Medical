@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 30% 98%;
+    --foreground: 215 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    --primary: 200 85% 45%;
+    --primary-glow: 200 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 20% 95%;
+    --secondary-foreground: 215 25% 25%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 50%;
+    --accent: 165 75% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 200 85% 45%;
+    --radius: 0.75rem;
+    --medical-blue: 200 85% 45%;
+    --medical-teal: 175 70% 40%;
+    --medical-navy: 215 50% 20%;
+    --medical-light: 200 30% 97%;
+  }
+
+  .dark {
+    --background: 215 35% 8%;
+    --foreground: 210 20% 95%;
+    --card: 215 30% 12%;
+    --card-foreground: 210 20% 95%;
+    --popover: 215 30% 12%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 200 80% 55%;
+    --primary-glow: 200 80% 65%;
+    --primary-foreground: 215 35% 8%;
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 165 70% 50%;
+    --accent-foreground: 215 35% 8%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 200 80% 55%;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50 shadow-md;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(180deg, hsl(200, 30%, 97%) 0%, hsl(200, 40%, 94%) 100%);
+  }
+
+  .card-3d {
+    @apply transition-all duration-500 hover:-translate-y-2;
+  }
+}
