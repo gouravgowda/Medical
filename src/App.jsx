@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Protocols from "./components/Protocols";
-import Trial from "./components/Trial";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
 import DoctorChat from "./components/DoctorChat";
 import CameraCapture from "./components/CameraCapture";
@@ -32,10 +29,10 @@ function App() {
       />
 
       <main>
-        <Hero onOpenCamera={() => setIsCameraOpen(true)} />
-        <Features />
-        <Protocols />
-        <Trial onOpenChat={() => setIsChatOpen(true)} />
+        <Home
+          onOpenChat={() => setIsChatOpen(true)}
+          onOpenCamera={() => setIsCameraOpen(true)}
+        />
       </main>
 
       <Footer />
